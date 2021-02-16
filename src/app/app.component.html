@@ -1,1 +1,19 @@
 <h1>{{title}}</h1>
+
+<h3>Select User</h3>
+<div class="permission-buttons">
+	<button (click)="onAdminClick()">Admin User</button>
+	<button (click)="onReadClick()">Read User</button>
+	<button (click)="onWriteClick()">Write User</button>
+	<button (click)="onRemoveClick()">Remove User</button>
+  <button (click)="onMultipleClick()">Multiple Permission</button>
+</div>
+
+
+<h3>User Permission Result</h3>
+<div *ngIf="showResult">
+	<p *checkPermission="'read'">Read permission</p>
+	<p *checkPermission="'write'">Write permission</p>
+	<p *checkPermission="'remove'">Remove permission</p>
+	<p *checkPermission="['buy','sell']">Multiple permission defined for one control(i.e: buy, sell)</p>
+</div>
