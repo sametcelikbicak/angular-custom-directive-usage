@@ -1,0 +1,10 @@
+.permission-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+button {
+  width: 10em;
+}
+
